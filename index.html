@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="left-column">
+            <h1 class="center-title">Kalkulator BMI</h1>
+            <form>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI.</p>
+
+                <label for="jenis-kelamin">Jenis Kelamin:</label>
+                <select id="jenis-kelamin">
+                    <option value="pria">Pria</option>
+                    <option value="wanita">Wanita</option>
+                </select>
+
+                <label for="berat">Berat Badan (kg):</label>
+                <input type="number" id="berat" required>
+
+                <label for="usia">Usia (Tahun):</label>
+                <input type="number" id="usia" required>
+
+                <label for="tinggi">Tinggi Badan (cm):</label>
+                <input type="number" id="tinggi" required>
+
+                <div class="button-container">
+                    <button type="button" onclick="hitungBMI()">Hitung BMI</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+
+            <div class="keunggulan">
+                <h2>Keunggulan Fitur</h2>
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+            </div>
+
+            <p class="disclaimer">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+
+            <p class="disclaimer">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI=Kg/M².</p>
+
+        </div>
+        <div class="right-column">
+            <div class="hasil">
+                <h2>Hasil</h2>
+                <p id="hasil-bmi">0</p>
+                <p id="kategori">Menunggu Perhitungan</p>
+                <button id="downloadBtn">Download Hasil BMI</button>
+
+                <p>Hasil BMI diantara 23 dan 25</p>
+                <p>Anda berada dalam kategori overweight atau berat badan berlebih. Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.</p>
+                <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+
+                <div class="konsultasi">
+                    <button>Konsultasi Ahli Gizi Via Aplikasi</button>
+                    <button>Registrasi Online Ahli Gizi</button>
+                </div>
+
+                <p class="disclaimer">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+
+                <div class="penyakit">
+                    <h2>Beberapa penyakit yang berasal dari kegemukan</h2>
+                    <ul>
+                        <li>Diabetes</li>
+                        <li>Hipertensi</li>
+                        <li>Sakit Jantung</li>
+                        <li>Osteoarthritis</li>
+                    </ul>
+                </div>
+
+                <div class="tombol">
+                    <button>Konsultasi Dokter Via Aplikasi</button>
+                    <button>Registrasi Online Sekarang</button>
+                </div>
+
+            </div>
+            <div>
+                <p class="center-text">Made by Muhamad Hafizh Nuryasin 2025</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
